@@ -1,4 +1,5 @@
 #!/bin/sh
+#Practice to read inputs
 #Enter your name
 #If you name matches, print name
 #Else print incorrect name
