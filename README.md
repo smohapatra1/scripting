@@ -1,4 +1,4 @@
 # scripting
-Repository for scripting and it contains following scripting languages
+Repository for scripting. This parent folder contains following scripting languages
   # bash
   # python
