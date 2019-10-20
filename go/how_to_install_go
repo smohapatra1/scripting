@@ -9,13 +9,15 @@ tar -C /usr/local -xvf go1.13.1.linux-amd64.tar.gz
 
 #Add /usr/local/go/bin to the PATH environment variable. 
 
-export GOPATH=$HOME/<your go path>
+mkdir -p $HOME/go
+export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 
 #This directory will be the directory where all your awesome golang magic will happen and go get will put all the files.
 go get
 
 #You can do this by adding this line to your /etc/profile (for a system-wide installation) or $HOME/.profile:
+
 
 PATH=$PATH:/usr/local/go/ - in ~/.profile
 
@@ -55,4 +57,7 @@ go build $HOME/hello/hello.go
 #delete the go directory. This is usually /usr/local/go under Linux, macOS, and FreeBSD or c:\Go under Windows.
 #
 
-#You should also remove the Go bin directory from your PATH environment variable. Under Linux and FreeBSD you should edit /etc/profile or $HOME/.profile. If you installed Go with the macOS package then you should remove the /etc/paths.d/go file. Windows users should read the section about setting environment variables under Windows.#
+#You should also remove the Go bin directory from your PATH environment variable. 
+#Under Linux and FreeBSD you should edit /etc/profile or $HOME/.profile. 
+#If you installed Go with the macOS package then you should remove the /etc/paths.d/go file. 
+#Windows users should read the section about setting environment variables under Windows.#
