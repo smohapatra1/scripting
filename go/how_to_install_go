@@ -8,17 +8,16 @@ curl -O https://storage.googleapis.com/golang/go1.13.1.linux-amd64.tar.gz
 tar -C /usr/local -xvf go1.13.1.linux-amd64.tar.gz
 
 #Add /usr/local/go/bin to the PATH environment variable. 
-#You can do this by adding this line to your /etc/profile (for a system-wide installation) or $HOME/.profile:
 
-export PATH=$PATH:/usr/local/go/bin
-
-#or
-
-export GOPATH=$HOME/work
+export GOPATH=$HOME/<your go path>
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 
 #This directory will be the directory where all your awesome golang magic will happen and go get will put all the files.
 go get
+
+#You can do this by adding this line to your /etc/profile (for a system-wide installation) or $HOME/.profile:
+
+PATH=$PATH:/usr/local/go/ - in ~/.profile
 
 source ~/.profile
 #Note **********
@@ -31,9 +30,9 @@ mkdir $HOME/work
 export GOPATH=$HOME/work
 export GOPATH=$HOME
 #You can create your own project 
-mkdir -p work/src/github.com/user/hello
+mkdir -p work/hello.go
+
 #Next, you can create a simple “Hello World” Go file.
-nano work/src/github.com/user/hello/hello.go
 #Inside your editor, paste in the content below, which uses the main Go packages, imports the formatted IO content component, and sets a new function to print ‘Hello World’ when run.
 package main
 import "fmt"
@@ -41,13 +40,14 @@ func main() {
     fmt.Printf("hello, world\n")
 }
 #This will build the file 
-go install github.com/user/hello
 
-#With the file compiled, you can run it by simply referring to the file at your Go path.
-sudo $GOPATH/bin/hello
+go build $HOME/hello/hello.go
+
+#Run - ./hello
 
 #If that command returns “Hello World”, then Go is successfully installed
 #
+
 #Uninstalling Go
 #****************
 
@@ -56,6 +56,3 @@ sudo $GOPATH/bin/hello
 #
 
 #You should also remove the Go bin directory from your PATH environment variable. Under Linux and FreeBSD you should edit /etc/profile or $HOME/.profile. If you installed Go with the macOS package then you should remove the /etc/paths.d/go file. Windows users should read the section about setting environment variables under Windows.#
-
-
-
