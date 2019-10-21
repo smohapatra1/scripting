@@ -7,36 +7,20 @@ import cmd
 import time
 
 #Install terraform through command line
-
-#How to run multiple shell commands in python
-'''
+#Create terraforom dir
+#Download terraform
+#Unzil the terraform file
+#copy terraform file to /usr/local/bin folder
+#Verify terraform version
 def subprocess_cmd(command):
-    process=subprocess.Popen(command,stdout=subprocess.PIPE,shell=True)
-    proc_stdout=process.communicate()[0].strip()
-    print (proc_stdout)
-subprocess_cmd('ls -lart ; who ; pwd ')
-'''
+    p=subprocess.Popen(command,stdout=subprocess.PIPE,shell=True)
+    p.stdout=p.communicate()[0].strip()
+    print (p.stdout)
 
-mycmd=os.popen('ls -lart').read()
-print (mycmd)
-for i in mycmd :
-    print (mycmd.strip())
+file="terraform_0.12.12_linux_amd64.zip"
 
+subprocess_cmd('ls -lart ;  mkdir -p $HOME/terraform/ ; cd $HOME/terraform/ ; rm -rf terraform_0.* ; curl -O https://releases.hashicorp.com/terraform/0.12.12/%s; sudo rm -rf /usr/local/bin/terraform ; sudo unzip $HOME/terraform/%s  -d /usr/local/bin ; ls -lrt /usr/local/bin/terraform ; terraform -v' % (str(file), str(file)) ) 
 
-#paramiko method
-'''
-ssh = paramiko.SSHClient()
-ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-ssh.connect('127.0.0.1', username='cisco', password='cisco')
-ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-chan = ssh.invoke_shell()
-
-chan.send('ls -lart')
-chan.send('\n')
-time.sleep(1)
-resp = chan.recv(9999)
-output = resp.decode('ascii').split(',')
-'''
 
 #os.system(sudo apt-get update)
 #os.system(sudo apt-get install wget unzip)
