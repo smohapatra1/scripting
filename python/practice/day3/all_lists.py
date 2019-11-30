@@ -11,5 +11,5 @@ x.reverse()
 print (x)
 x.remove("c")
 print (x)
-del x
+del x[2]
 print (x)
