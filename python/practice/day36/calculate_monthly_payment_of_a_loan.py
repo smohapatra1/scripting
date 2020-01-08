@@ -1,4 +1,4 @@
-#Function Exercise 12 (Calculate Monthly Payment for a Loan)
+#Function Exercise 12 (Calculate Monthly Payment for a Loan) - Incomplete
 def emi(x):
     if x >=0 :
         duration = 5
