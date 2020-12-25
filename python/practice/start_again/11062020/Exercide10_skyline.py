@@ -2,12 +2,20 @@
 # and every odd letter is lowercase 
 
 def skyline(**kwargs):
+    out =[]
     for i in kwargs:
-        out = ''
-        print (len(i))
-        if len(i) % 2 == 0 :
-            print (out.append(kwargs[i].upper()))
+        #print (kwargs[i])
+        
+        #print (len(kwargs[i]))
+        if len(kwargs[i])%2 == 0 :
+            print ("Even : ", kwargs[i].upper())
+            out.append(kwargs[i].upper())
+    #return out
         else:
-            print ("Letter is Odd {}".format (i))
-skyline(letter1 = "Samar", letter2 = "Sa", lett = "Sama")
-#Incomplete
+            print ("ODD : ", kwargs[i].lower())
+            out.append(kwargs[i].lower())
+    #return ''.join(out)
+    return out
+    
+skyline(letter1 = "Samar", letter2 = "Sa", lett = "Sama",letter5 = 'sam')
+
