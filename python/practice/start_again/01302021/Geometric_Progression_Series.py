@@ -14,6 +14,7 @@ def main():
         print ("%d " %value, end=" ")
         total = total + value
         value = value * r
+    print (i)
     print ("\nSum of G.P series = " , total)
 if __name__ == "__main__":
     main()
