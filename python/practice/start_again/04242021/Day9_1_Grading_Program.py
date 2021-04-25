@@ -20,3 +20,23 @@
 
 #Expected Output
 #'{'Harry': 'Exceeds Expectations', 'Ron': 'Acceptable', 'Hermione': 'Outstanding', 'Draco': 'Acceptable', 'Neville': 'Fail'}'
+
+student_scores = {
+    "sam" : 90,
+    "jon" : 50,
+    "tom" : 88,
+    "harry" : 60,
+    }
+student_grades = {}    
+for student in student_scores: 
+    score = student_scores[student]
+    #print (student)
+    if score >= 90 :
+        student_grades[student] = "Outstanding"
+        print (f"{student} - {student_grades[student]} - {score} ")
+    elif score > 70:
+        student_grades[student] = "Exceeds Expectations"
+        print (f"{student} - {student_grades[student]} - {score} ")
+    else:
+        student_grades[student] = "Fail"
+        print (f"{student} - {student_grades[student]} - {score} ")
