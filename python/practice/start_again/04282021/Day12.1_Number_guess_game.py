@@ -8,17 +8,17 @@ import math
 EASY_LEVEL_TURN = 5
 HARD_LEVEL_TUEN = 10 
 
-def choose_answer(y,guess,moves):
+def choose_answer(y,guess,turns):
     """ Check answers against guess, Returns the number if it matches """
     if y == guess :
         print (f"Guess right {guess}, range {y} ")
-        return moves - 1
+        return turns - 1
     elif y > guess :
         print (f"You guessed {guess} small  ")
-        return moves - 1
+        return turns - 1
     elif y < guess:
         print (f"You guessed {guess} big ")
-        return moves - 1 
+        return turns - 1 
     else:
         print (f"You got it! The answer was {guess}")
 
@@ -39,17 +39,20 @@ def game():
     upper=int(input("Enter the upper bound: "))
     #Generate a random number between upper and lower 
     y = random.randint(lower,upper)
-    #print (f"Number Range would be - {y}")
+    print (f"Number Range would be - {y}")
     turns=set_difficulty()
     #Guess the number
     guess = 0 
     while guess != y :
+        print(f"You have {turns} attempts remaining to guess the number.")
         guess = int(input("Guess a number: "))
-        moves = choose_answer(y, guess, turns)
-        if moves == 0:
+        turns = choose_answer(y, guess, turns)
+        if turns == 0:
             print ("You have run out of move, you loose")
+            return
         elif guess !=y :
-            print ("Guess Again !")
+            print (f"Guess Again !")
+             
 game()    
 
 
