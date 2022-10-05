@@ -8,7 +8,7 @@ class Node:
         self.data=data
         self.next_node=None
 
-class Linked_List:
+class Linked_list:
     def __init__(self):
         self.head=None
         self.size=0
