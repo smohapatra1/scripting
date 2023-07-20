@@ -20,15 +20,15 @@ def twoSum(nums,target):
     for i in range(n):
         for j in range(i+1, n ):
             if nums[j] == target - nums[i]:
-                #return [i, j] 
-                print ("The fields are {},{} and values are {} + {} = {}".format(i , j, nums[i], nums[j],target))
+                return [i, j] 
+                #print ("The fields are {},{} and values are {} + {} = {}".format(i , j, nums[i], nums[j],target))
     return False
 
 if __name__ == "__main__":
     nums=[1,2,3,5,8,10]
-    target=8
+    target=9
     if twoSum(nums,target):
-        print ("The sum exist ")
+        print ("The target={} exist ".format(target))
     else:
-        print ("The sum doesn't exist" )
+        print ("The target={} doesn't exist".format(target) )
  
