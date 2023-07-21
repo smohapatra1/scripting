@@ -26,9 +26,6 @@ def twoSum(nums,target):
 
 if __name__ == "__main__":
     nums=[1,2,3,5,8,10]
-    target=9
-    if twoSum(nums,target):
-        print ("The target={} exist ".format(target))
-    else:
-        print ("The target={} doesn't exist".format(target) )
- 
+    target=3
+    print ("The nums are {} & Target is {}".format(nums, target))
+    print ("The Number positions for the target are {}".format(twoSum(nums,target)))
