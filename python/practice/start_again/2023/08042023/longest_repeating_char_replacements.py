@@ -18,6 +18,7 @@
 # Explanation: Replace the one 'A' in the middle with 'B' and form "AABBBBA".
 # The substring "BBBB" has the longest repeating letters, which is 4.
 # There may exists other ways to achieve this answer too.
+from collections import Counter
 
 def longest_repeat_char_replace(word, k ):
     #Solution - 01 
@@ -35,10 +36,10 @@ def longest_repeat_char_replace(word, k ):
     # return max_length
 
     #Solution 02
-    
+
     max_count=0
     result=0
-    count = collections.Counter()
+    count = Counter()
     for i in range(len(word)):
         count[word[i]] +=1  # Increment the count of current chars 
         max_count = max (max_count, count[word[i]])
