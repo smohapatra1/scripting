@@ -32,7 +32,7 @@
 # minStack.top();    // return 0
 # minStack.getMin(); // return -2
 
-#The bellow code accepted in Leetcode 
+#The bellow code accepted in Leet code 
 
 def __init__(self):
     self.stack=[]
