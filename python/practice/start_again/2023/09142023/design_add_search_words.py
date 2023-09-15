@@ -31,6 +31,8 @@
 # wordDictionary.search(".ad"); // return True
 # wordDictionary.search("b.."); // return True
 
+from collections import defaultdict
+
 if __init__(self):
     self.words=defaultdict(list)
 
