@@ -37,7 +37,7 @@ def Nqueens(n: str) -> List[List[str]]:
         for c in range(n):
             diff = r - c
             _sum=r+c 
-            if not (c in visited_cols or diff in visited_diagonals or _sum in visited_diagonals):
+            if not (c in visited_cols or diff in visited_diagonals or _sum in visited_antidiagonals):
                 visited_cols.add(c)
                 visited_diagonals.add(diff)
                 visited_antidiagonals.add(_sum)
