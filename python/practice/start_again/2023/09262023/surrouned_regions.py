@@ -34,7 +34,7 @@ def solve(board: List[List[str]]) -> None:
     m=len(board)
     n=len(board[0])
     def dfs(i:int, j:int ) -> None:
-        if i<0 or i >=m or j < 0 or j >=n or board[i][j] !='O':
+        if i<0 or i >=m or j < 0 or j >=n or board[i][j] != 'O':
             return 
         board[i][j] = '#' # Mark as visited 
         #Mark all adjacent 0's
