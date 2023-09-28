@@ -28,6 +28,7 @@
 
 from typing import List
 from collections import defaultdict
+import collections
 def FindItinerary(tickets: List[List[str]]) -> List[str]:
     graph = collections.defaultdict(list)
     for src, des in tickets:
