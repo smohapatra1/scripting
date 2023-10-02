@@ -38,7 +38,8 @@ import collections
 from collections import defaultdict
 import heapq
 from collections import deque
-def alian_order(words: List[List[str]]) -> str:
+from collections import Counter
+def alien_order(words: List[List[str]]) -> str:
     adj_list=defaultdict(set)
     in_degree=Counter({c :0 for word in words for c in word})
     for first_word, second_word in zip(words, words[1:]):
@@ -65,7 +66,7 @@ def alian_order(words: List[List[str]]) -> str:
     return "".join(output)
 if __name__ == "__main__":
     words=["wrt", "wrf", "er", "ett", "rftt"]
-    print ("{}".format(alian_order(words)))
+    print ("{}".format(alien_order(words)))
 
 
 
