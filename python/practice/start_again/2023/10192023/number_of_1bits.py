@@ -31,9 +31,15 @@
 
 
 def hammingWeight(n:int) -> int:
-    return bin(n).count('1')
+    #return bin(n).count('1')
+    #Solution-02
+    res=0
+    while n:
+        n = n & (n-1)
+        res +=1
+    return res
 
 if __name__ == "__main__":
     #n=00000000000000000000000000001011
-    n = 00000000000000000000000010000000
+    n = int("00000000000000000000000010000000")
     print ("{}".format(hammingWeight(n)))
