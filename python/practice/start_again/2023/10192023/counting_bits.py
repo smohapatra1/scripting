@@ -35,7 +35,7 @@ def counting_bits(n: int) -> List[int]:
     # for i in range(1, n+1):
     #     counter.append(counter[i>>1] + i % 2)
     # return counter
-    #Solution - 02 
+    #Solution - 02
     return [bin(i).count('1') for i in range(n+1)]
 
 
