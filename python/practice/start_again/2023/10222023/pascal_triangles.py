@@ -20,13 +20,12 @@
 # Input: numRows = 1
 # Output: [[1]]
 
-
-def Pascal_Triangle(numRows : int ):
+def Pascal_Triangle(self, numRows : int ):
     if numRows == 0:
         return []
     if numRows == 1:
         return [[1]]
-    prevRow=generate(numRows -1)
+    prevRow=self.generate(numRows -1)
     newRow = [1] * numRows
     for i in range(1, numRows -1):
         numRows[i] = prevRow[-1][i-1] + prevRow[-1][i]
