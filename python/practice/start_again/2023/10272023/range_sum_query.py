@@ -40,5 +40,7 @@ def sumRange(self, left: int, right: int) -> int:
 
 if __name__ == "__main__":
     nums=["NumArray", "sumRange", "sumRange", "sumRange"] [[[-2, 0, 3, -5, 2, -1]], [0, 2], [2, 5], [0, 5]]
+    left=""
+    right=""
     print ("{}".format(sumRange(left, right)))
 
