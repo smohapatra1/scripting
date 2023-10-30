@@ -29,11 +29,14 @@
 
 from typing import List
 def nums_disappeared(nums: List[int]) -> List[int]:
-    for i in nums:
-        a = abs(i) - 1
-        if nums[a] > 0:
-            nums[a] *= -1
-    return [i+1 for i, n in enumerate(nums) if n> 0 ]
+    #Solution -01
+    # for i in nums:
+    #     a=abs(i) -1
+    #     if nums[a] > 0:
+    #         nums[a] *=-1
+    # return [i+1 for i, n in enumerate(nums) if n > 0]
+    #Solution-02
+    return set(range(1, len(nums) + 1)) - set(nums)
 
 
 if __name__ == "__main__":
