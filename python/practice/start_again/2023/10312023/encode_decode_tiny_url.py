@@ -36,17 +36,17 @@ def __init__(self):
 
 def hash_to(self, s):
      return 'https://tin.e' + hashlib.md5(s.encode()).hexdigest()
-def encode(longurl: str) -> str:
-     hash_key=self.hash_to(longurl)
-     self.urls[hash_key] = longurl
+def encode(longUrl: str) -> str:
+     hash_key=self.hash_to(longUrl)
+     self.urls[hash_key] = longUrl
      return hash_key
      
      
-def decode(shorturl : str) -> str:
-     return self.urls[shorturl]
+def decode(shortUrl : str) -> str:
+     return self.urls[shortUrl]
 
 if __name__ == "__main__":
-     longurl = "https://leetcode.com/problems/design-tinyurl"
-     sorturl="http://tinyurl.com/4e9iAk"
-     print ("{}".format(encode(longurl)))
-     print ("{}".format(decode(sorturl)))
+     longUrl = "https://leetcode.com/problems/design-tinyurl"
+     sortUrl="http://tinyurl.com/4e9iAk"
+     print ("{}".format(encode(longUrl)))
+     print ("{}".format(decode(sortUrl)))
