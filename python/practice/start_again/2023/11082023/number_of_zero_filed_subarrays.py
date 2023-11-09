@@ -36,7 +36,7 @@
  
 
 from typing import List
-def sumarryas( nums: list[int]) -> int:
+def subArrays( nums: list[int]) -> int:
     total_sub_zeros = curr_sub_zeros = 0 
     for num in nums:
         if num == 0 :
@@ -50,4 +50,4 @@ def sumarryas( nums: list[int]) -> int:
 if __name__ == "__main__":
     #nums = [0,0,0,2,0,0]
     nums = [1,3,0,0,2,0,0,4]
-    print ("{}".format(sumarryas(nums)))
+    print ("{}".format(subArrays(nums)))
