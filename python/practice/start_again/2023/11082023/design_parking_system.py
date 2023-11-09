@@ -48,4 +48,6 @@ def addCar(self, carType: int) -> bool:
         return False
     
 if __name__ == "__main__":
+    carType = [1,2,3]
+    print ("{}".format(addCar(carType)))
         
