@@ -35,7 +35,7 @@
 
 
 from typing import List
-def merge(nums1: List[int], nums2: List[int], m: int, n:int) -> List[int]:
+def merge(nums1: List[int], nums2: List[int], m: int, n:int) -> None:
     #Solution-01
 
     # for i in range(m, m+n):
