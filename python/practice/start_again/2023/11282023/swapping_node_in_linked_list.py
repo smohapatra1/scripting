@@ -20,6 +20,7 @@
 # Input: head = [7,9,6,6,7,8,3,0,9,5], k = 5
 # Output: [7,9,6,6,8,7,3,0,9,5]
 
+
 def SwapNodes(head: ListNode, k: int) -> ListNode:
     left = right = head 
     for _ in range(k-1):
