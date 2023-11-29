@@ -83,17 +83,6 @@ class LFUCache:
             self._freqs[1][key] = value
 
 
-
-
-
-    def get(self, key: int) -> int:
-
-        
-
-    def put(self, key: int, value: int) -> None:
-        
-
-
 # Your LFUCache object will be instantiated and called as such:
 # obj = LFUCache(capacity)
 # param_1 = obj.get(key)
