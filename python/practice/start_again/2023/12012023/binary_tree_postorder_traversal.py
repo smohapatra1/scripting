@@ -37,5 +37,5 @@ def postOrder(root: List[int]) -> List[int]:
 
 
 if __name__ == "__main__":
-    root = [1,null,2,3]
+    root = [1,2,3]
     print ("{}".format(postOrder(root)))
