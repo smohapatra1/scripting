@@ -27,17 +27,27 @@
 # Output: [4,2,7,1,3,5]
 
 def insertIntoBST( root : TreeNode, val: int) -> TreeNode:
-    if not root:
-        return TreeNode(val)
-    curr = None
-    next = root
-    while next:
-        curr = next
-        next = curr.left if val < curr.val else curr.right
-    if val < curr.val:
-        curr.left = TreeNode(val)
+    # Solution - 01 
+    # if not root:
+    #     return TreeNode(val)
+    # curr = None
+    # next = root
+    # while next:
+    #     curr = next
+    #     next = curr.left if val < curr.val else curr.right
+    # if val < curr.val:
+    #     curr.left = TreeNode(val)
+    # else:
+    #     curr.right = TreeNode(val)
+    # return root
+
+    # Solution - 02 
+    if root is None:
+        return TreeVal(val)
+    if root.val < val:
+        root.right = self.insertIntoBST(root.right.val)
     else:
-        curr.right = TreeNode(val)
+        root.left = self.insertIntoBST(root.left.val)
     return root
 
 
