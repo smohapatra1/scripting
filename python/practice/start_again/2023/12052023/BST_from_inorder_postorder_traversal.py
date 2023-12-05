@@ -34,4 +34,4 @@ def buildTree( inorder: List[int], postorder: List[int])-> TreeNode:
 if __name__ == "__main__":
     inorder = [9,3,15,20,7]
     postorder = [9,15,7,20,3]
-    print ("{}".format(buildTree(inorder, postorder)))
+    print ("{}".format(buildTree(inorder, postorder)))  
