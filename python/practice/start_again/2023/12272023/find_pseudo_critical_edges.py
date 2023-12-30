@@ -47,7 +47,7 @@ class UnionFind:
         pu, pv = self.find_parent(u), self.find_parent(v)
         self.parent[pu] = pv
 class solutions:
-    def FindPseudoCriticalEdge(n: int, edges: List[List[int]]) -> List[List[int]]:
+    def FindPseudoCriticalEdge(self, n: int, edges: List[List[int]]) -> List[List[int]]:
         def cmp(a,b):
             return a[2] < b[2]
         critical = []
