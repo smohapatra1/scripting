@@ -73,11 +73,12 @@ def RobotBouncedInCircle( instructions : str) -> bool:
             directions = (-directions[1], directions[0])
         elif x == "R":
             directions = (directions[1], -directions[0])
-    return start == [0][0] or directions != (0,1)
+    return start == [0,0] or directions != (0,1)
 
 
 
 if __name__ == "__main__":
     #instructions = "GGLLGG"
-    instructions = "GG"
+    #instructions = "GG"
+    instructions = "GLRLLGLL"
     print ("{}".format(RobotBouncedInCircle(instructions)))
