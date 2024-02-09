@@ -47,5 +47,5 @@
 import numpy as np
 if __name__ == "__main__":
     n=int(input().strip())
-    s=np.array([[float(x) for x in input().strip().split()] for x in range(n)], dtype=float)
+    s=np.array([[float(x) for x in input().strip().split()] for _ in range(n)], dtype=float)
     print (np.linalg.det(s))
