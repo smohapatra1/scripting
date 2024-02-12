@@ -46,6 +46,10 @@
 
 import numpy as np
 if __name__ == "__main__":
-    n=int(input().strip())
-    s=np.array([[float(x) for x in input().strip().split()] for _ in range(n)], dtype=float)
+    # n=int(input().strip())
+    # s=np.array([[float(x) for x in input().strip().split()] for _ in range(n)], dtype=float)
+    # print (np.linalg.det(s))
+    np.set_printoptions(legacy='1.13')
+    n=int(input())
+    s=np.array([input().split() for _ in range(n)], float)
     print (np.linalg.det(s))
