@@ -65,7 +65,7 @@ def fun(s):
         return False
     elif website.isalnum() is False:
         return False
-    elif len(extentions) < 2:
+    elif len(extentions) > 3:
         return False
     else:
         return True
