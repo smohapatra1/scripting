@@ -58,5 +58,11 @@ def ConvertTime(s):
     print (str(ntime[:-2]))
 
 if __name__ == "__main__":
+    # f = open(os.environ['OUTPUT_PATH'], 'w')
+    # s = input()
+    # result = ConvertTime(s)
+    # f.write(result + '\n')
+    # f.close()
+
     s = input()
     ConvertTime(s)
