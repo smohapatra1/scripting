@@ -80,4 +80,5 @@ if __name__ == "__main__":
     # f.close()
 
     s = input()
-    ConvertTime(s)
+    res=ConvertTime(s)
+    print (res)
