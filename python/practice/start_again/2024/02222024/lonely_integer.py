@@ -1,0 +1,41 @@
+# #   https://www.hackerrank.com/challenges/one-week-preparation-kit-lonely-integer/problem?isFullScreen=true&h_l=interview&playlist_slugs%5B%5D=preparation-kits&playlist_slugs%5B%5D=one-week-preparation-kit&playlist_slugs%5B%5D=one-week-day-two
+
+# Given an array of integers, where all elements but one occur twice, find the unique element.
+
+# Example
+
+# The unique element is .
+
+# Function Description
+
+# Complete the lonelyinteger function in the editor below.
+
+# lonelyinteger has the following parameter(s):
+
+# int a[n]: an array of integers
+# Returns
+
+# int: the element that occurs only once
+# Input Format
+
+# The first line contains a single integer, , the number of integers in the array.
+# The second line contains  space-separated integers that describe the values in .
+
+# Constraints
+
+# It is guaranteed that  is an odd number and that there is one unique element.
+# , where .
+
+def lonelyinteger(arr):
+    # Count each numbers in the list 
+    # Print the least occurance in the list 
+    res=0
+    for elmt in arr:
+        res ^= elmt
+    return res
+
+if __name__ == "__main__":
+    n=int(input().strip())
+    arr=list(map(int, input().strip().split()))
+    result=lonelyinteger(arr)
+    print (result)
