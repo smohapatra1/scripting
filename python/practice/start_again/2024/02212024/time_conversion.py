@@ -44,18 +44,33 @@ import re
 import sys
 
 def ConvertTime(s):
+    # Solution - 01 
     #Look for the PM value in the string
     # IF the value is PM, add 12 into hour
     # Else if the value is 12 print 00
-    time = s.split(":")
-    if s[-2:] == "PM":
-        if time[0] != "12":
-            time[0] = str(int(time[0])+12)
-        else:
-            if time[0] == "12":
-                time[0] = "00"
-    ntime = ':'.join(time)
-    print (str(ntime[:-2]))
+
+    # time = s.split(":")
+    # if s[-2:] == "PM":
+    #     if time[0] != "12":
+    #         time[0] = str(int(time[0])+12)
+    #     else:
+    #         if time[0] == "12":
+    #             time[0] = "00"
+    # ntime = ':'.join(time)
+    # return str(ntime[:-2])
+
+    # Solution - 02 
+    if s[-2:] == "AM" and s[:-2] == "12":
+        return "00" + s[2:-2]
+    elif s[:-2] == "AM":
+        return s[:-2]
+    elif s[:-2] == "PM" and s[:2] == "12":
+        return s[:-2]
+    else:
+        res=int(s[:2]) + 12
+        return str(str(res) + s[2:8])
+
+
 
 if __name__ == "__main__":
     # f = open(os.environ['OUTPUT_PATH'], 'w')
