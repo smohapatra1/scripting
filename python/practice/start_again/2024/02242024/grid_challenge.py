@@ -65,16 +65,11 @@
 # This fulfills the condition since the rows 1, 2, ..., 5 and the columns 1, 2, ..., 5 are all alphabetically sorted.
 
 def gridChallenge(grid):
-    n=len(grid)
-    rows=[[0] for i in range(n)]
-    for i, item in enumerate(grid):
-        rows[i] = [*item]
-    m=len(rows[0])
-    for j in range(m):
-        column=''.join(rows[i][j] for i in range(n))
-        if column !=''.join(sorted(column)):
-            return 'NO'
-    return 'YES' 
+    grid=[sorted(row) for row in grid]
+    t=tuple(zip(*grid))
+    if all (row[i] <= row[i+1] for row in t for i in range(len(row)- 1)):
+        return 'YES'
+    return 'NO' 
 
 
 if __name__ == "__main__":
