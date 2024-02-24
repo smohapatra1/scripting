@@ -56,7 +56,6 @@ import sys
 
 def timeConversion(s):
     # Write your code here
-    time=s.split(':')
     time = s.split(":")
     if s[-2:] == "PM":
         if time[0] != "12":
