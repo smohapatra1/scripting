@@ -49,9 +49,6 @@ def matchPair(n, ar):
         count +=ar.count(v)//2
     return count
 
-
-
-
 if __name__ == "__main__":
     n=int(input())
     ar=list(map(int, input().strip().split()))
