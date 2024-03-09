@@ -47,7 +47,6 @@
 # Define  to be the beautiful reordering of . The sum of the absolute values of differences between its adjacent elements is minimal among all permutations and only two swaps ( with  and then  with ) were performed.
 
 
-
 #!/bin/python3
 
 import math
@@ -63,21 +62,24 @@ import sys
 # The function accepts INTEGER_ARRAY arr as parameter.
 #
 
+def Swaps(arr):
+    positions = sorted(list(enumerate(arr)), key=lambda e: e[1])
+    swaps = 0
+    for idx in range(len(arr)):
+        while True:
+            if (positions[idx][0] == idx):
+                break
+            else:
+                swaps += 1
+                swapped_idx = positions[idx][0]
+                positions[idx], positions[swapped_idx] = positions[swapped_idx], positions[idx]
+    
+    return swaps
+
 def lilysHomework(arr):
     # Write your code here
-    arr2=list(arr)
-    arr_sorted=sorted(arr)
-    count = [0,0]
-    for i in range(len(arr)):
-        if arr[i] != arr_sorted[i]:
-            arr[arr.index(arr_sorted[i])] = arr[i]
-            arr[i] = arr_sorted[i]
-            count [0] +=1
-        if arr2[-i-1] !=arr_sorted[i]:
-            arr2[arr2.index(arr_sorted[i])] = arr2[-i-1]
-            arr2[-i-1] = arr_sorted[i]
-            count[1] +=1
-    return min(count)
+    return min(Swaps(arr), Swaps(arr[::-1]))
+
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
@@ -90,3 +92,4 @@ if __name__ == '__main__':
     fptr.write(str(result) + '\n')
 
     fptr.close()
+
