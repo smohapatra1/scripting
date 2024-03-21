@@ -77,13 +77,12 @@ import sys
 
 def dayOfProgrammer(year):
     # Write your code here
-    if year <=1917:
-        return f"{12 if year % 4 == 0 else 13 }.09.{year}"
-    elif year == 1918:
-        return "16.09.1918"
+    if (year == 1918):
+        return '26.09.1918'
+    elif ((year <= 1917) & (year%4 == 0)) or ((year > 1918) & (year%400 == 0 or ((year%4 == 0) & (year%100 != 0)))):
+        return '12.09.%s' %year
     else:
-        d = 12 if (year % 4 == 0 and year % 100 != 0 ) or year % 400 == 0 else 13
-        return f"{d}.09.{year}"
+        return '13.09.%s' %year
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
