@@ -37,7 +37,7 @@
 
 def DrawingBook(n,p):
     front=p//2
-    back=n//2
+    back=n//2 - front 
     return min(front, back)
 
 
