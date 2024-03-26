@@ -65,7 +65,8 @@
 
 def SaveThePrisoner(n, m, s ):
     # return (((s-1)+ ((m-1)%n)) % n ) +1 
-    return n if (m + s - 1) % n == 0 else (m + s - 1) % n 
+    # return n if (m + s - 1) % n == 0 else (m + s - 1) % n 
+    return ((s-1+m-1) % n + 1)
 
 
 if __name__ == "__main__":
