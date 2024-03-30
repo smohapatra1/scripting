@@ -47,7 +47,7 @@
 # 2 + 4 = 6
 # Only  will not ever sum to a multiple of .
 
-
+from collections import defaultdict
 
 def nonDivisibleSubset(k, s):
     # Write your code here
