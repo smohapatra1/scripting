@@ -44,16 +44,16 @@
 # The answer is .
 
 def minimumDistance(a):
-    l = len(a)
-    for i in range(l):
-        for j in range(i+1, l ):
-            if a[i] == a [j]:
-                distance = abs(i-j)
-                l = min(l, distance)
-    if l == len(a):
+    b = len(a)
+    for i in range(len(a)):
+        for j in range(i + 1, len(a)):
+            if a[i] == a[j]:
+                distance = abs(i - j)
+                b = min(b, distance)
+    if b==len(a):
         return -1
     else:
-        return l
+        return b
 
 if __name__ == "__main__":
     n = int(input().strip())
