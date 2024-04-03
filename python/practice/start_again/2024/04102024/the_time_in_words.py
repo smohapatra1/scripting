@@ -43,8 +43,6 @@
 
 # quarter past seven
 
-
-
 #!/bin/python3
 
 import math
@@ -67,32 +65,35 @@ def timeInWords(h, m):
     words = [
         'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'quarter', 'sixteen', 'seventeen', 'eighteen', 'nineteen','twenty', 'half'
     ]
-    if m != 0 :
-        if 60 - m >= 30 and m > 0:
+    if m != 0:
+
+        if 60 - m >= 30 and m>0:
             past_to = ' past '
             hours = words[h-1]
         else:
-            past_to = 'to '
-            m=60 - m
+            past_to = ' to '
+            m = 60 - m
             hours = words[h]
-            
-        if m == 1 :
-            minutes = ' minute '
+
+        if m == 1:
+            minutes = ' minute'
         elif m == 15 or m == 30:
-            minutes = ""
+            minutes = ''
         else:
-            minutes = ' minutes '
+            minutes = ' minutes'
+            
         if 1 < m and m <= 20:
-            mword = words[m-1]
+            mword = words[m-1] 
         elif 20 < m and m < 30:
-            mword = words[1-9] + ' ' + words[int(str(m)[-1])-1]
+            mword = words[19] + ' ' + words[int(str(m)[-1])-1] 
         elif m == 30:
-            mword = words[20]
+            mword = words[20] 
         elif m == 15:
-            mword = words[14]
-        elif m == 1 :
-            mword = words[m-1]
-        return mword + minutes + past_to+hours
+            mword = words[14] 
+        elif m == 1:
+            mword = words[m-1] 
+        
+        return mword + minutes + past_to + hours
     else:
         return words[h-1] + " o' clock"
     
