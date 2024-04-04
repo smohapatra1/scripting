@@ -68,7 +68,7 @@ def flatSpaceStation(n, c):
     if len(c) == n:
         return 0
     c.sort()
-    maximum = max(c[0], n-1-c[1])
+    maximum = max(c[0], n-1-c[-1])
     for i in range(1, len(c)):
         distance = (c[i] -c [i-1])//2
         maximum = max (maximum, distance)
