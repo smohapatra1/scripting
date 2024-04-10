@@ -73,13 +73,13 @@
 # . Perform the xor sum on each interval:
 
 def xorSequence(l, r):
-    A = [0]
-    T = 0 
-    for i in range(r+1):
-        A.append(A[i]^i)
-        if l<=i <=r:
-            T ^=A[i+1]
-    return T 
+    A = 0
+    B = 0
+    for i in range(1, r+1):
+        B ^=i
+        if i >= l:
+            A = A ^ B
+    return A
 if __name__ == "__main__":
     q = int(input())
     for q_itr in range(q):
