@@ -55,7 +55,22 @@
 # 8
 
 def andProduct(a, b ):
-    return a & b & ~((1<< (b-a).bit_length())-1)
+    # Write your code here
+    # Solution -01 - couple of test cases failed
+    # sum = a & (a+1)
+    # for i in range(a+2, b-1):
+    #     sum = sum & i
+    # return sum
+    # Solution - 02
+    n = 0 
+    while a != b:
+        a >>=1
+        b >>=1
+        n +=1
+    return a <<n
+    
+    # Solution - 03
+    # return a&b &~((1<< (b-a).bit_length())-1)
 
 if __name__ == "__main__":
     n = int(input().strip())
