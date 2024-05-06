@@ -101,9 +101,6 @@ def maximumSum(a, m):
         else:
             pre.append(p[j])
     return m-d
-      
-        
-    
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
