@@ -62,6 +62,8 @@ import sys
 #  3. INTEGER n
 #
 
+sys.set_int_max_str_digits(0)
+
 def fibonacciModified(t1, t2, n):
     # Write your code here
     if n == 1 :
