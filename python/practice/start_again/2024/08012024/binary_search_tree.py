@@ -32,3 +32,11 @@ def pre_order_print(root):
     print (root.data)
     pre_order_print(root.r_child)
 
+
+if __name__ == '__main__':
+    r = Node(3)
+    binary_insert(r, Node(7))
+    binary_insert(r, Node(1))
+    binary_insert(r, Node(5))
+    print("Tree Inserted Successfully")
+
