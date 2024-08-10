@@ -9,8 +9,11 @@ def LenList(List):
     #     Counter = Counter +1 
     # return Counter
     # Ways - 3 
-    len = sum(1 for i in List)
-    return len
+    # len_list = sum(1 for i in List)
+    # return len_list
+    # ways - 4 
+    len_list = sum(1 for _ in List)
+    return len_list
 
 if __name__ == "__main__":
     List = [10, 11, 15, 18, 20]
