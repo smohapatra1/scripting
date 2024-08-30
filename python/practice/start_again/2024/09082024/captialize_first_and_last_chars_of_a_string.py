@@ -7,7 +7,7 @@
 def Caps(s):
     res = ''
     for i in s.title().split():
-        res += (i[:-1] +i [-1].upper()) + ' '
+        res += (i[:-1] + i[-1].upper()) + ' '
     return res
 
 if __name__ == "__main__":
