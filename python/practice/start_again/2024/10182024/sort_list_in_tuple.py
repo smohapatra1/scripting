@@ -1,8 +1,14 @@
 #   https://www.geeksforgeeks.org/python-sort-lists-in-tuple/
 
 def Sorted(test_tup):
+
     print ("Tuples before sorted : " + str(test_tup))
-    res = tuple(sorted(sub) for sub in test_tup)
+    # Solution 01
+    # res = tuple(sorted(sub) for sub in test_tup)
+    # return res
+    
+    # Solution - 02 
+    res = tuple(map(sorted, test_tup))
     return res
 
 
