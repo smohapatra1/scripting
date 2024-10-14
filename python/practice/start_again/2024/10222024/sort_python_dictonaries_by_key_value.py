@@ -7,5 +7,6 @@ def SortedD(d):
     return sd
 
 if __name__ == "__main__":
-    d = {'ravi': 10, 'rajnish': 9, 'sanjeev': 15}
+    # d = {'ravi': 10, 'rajnish': 9, 'sanjeev': 15}
+    d = {2: 56, 1: 2, 5: 12, 4: 24}
     print ("Results after sorting : ", SortedD(d))
