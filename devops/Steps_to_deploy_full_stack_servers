@@ -1,0 +1,5 @@
+* Install following plug ins 
+vagrant plugin install vagrant-hostmanager
+vagrant plugin install vagrant-vbguest
+* Create a file which can create multiple Virtual Machines/Vagrant
+* Change the image as the way you want
