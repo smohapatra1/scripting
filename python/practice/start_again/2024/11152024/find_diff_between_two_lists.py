@@ -8,11 +8,13 @@ def Diff(list1, list2):
     #         a.append(i)
     # return a 
     # Solution - 02
-    res = [val for val in list1 if val not in list2] 
+    # res = [val for val in list1 if val not in list2] 
+    # return res
+
+    # Solution - 03
+    res = list(set(list1) - set(list2))
     return res
     
-
-
 if __name__ == "__main__":
     # list1 = [1, 2, 3, 4, 5, 6]
     # list2 = [4, 5, 6, 7, 8]
