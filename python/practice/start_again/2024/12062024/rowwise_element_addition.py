@@ -1,12 +1,14 @@
 #   https://www.geeksforgeeks.org/python-row-wise-element-addition-in-tuple-matrix/
 
 def Rowwise(test_list, cus_eles):
-    # res = [[sub + (cus_eles[idx], )for sub in val] for idx, val in enumerate(test_list)]
-    # return res  
-    res = []
-    for i, row in enumerate(test_list):
-        res.append(list(map(lambda x:x + (cus_eles[i],), row)))
-    return res
+    # Solution - 01 
+    res = [[sub + (cus_eles[idx], )for sub in val] for idx, val in enumerate(test_list)]
+    return res  
+    # Solution - 02 
+    # res = []
+    # for i, row in enumerate(test_list):
+    #     res.append(list(map(lambda x:x + (cus_eles[i],), row)))
+    # return res
 
 
 if __name__ == "__main__":
