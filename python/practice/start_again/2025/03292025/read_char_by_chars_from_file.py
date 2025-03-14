@@ -6,5 +6,5 @@ while 1:
     char = file.read(1)
     if not char:
         break
-    print (char, end='')
+    print (char)
 file.close()
