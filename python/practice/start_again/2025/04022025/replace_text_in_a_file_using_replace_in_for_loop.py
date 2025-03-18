@@ -7,4 +7,4 @@ with open('file.txt', 'r') as file:
     filedata = filedata.replace(x, y)
 with open('file.txt', 'w') as file:
     file.write(filedata)
-print("Data replaced successfully")
+print("Data replaced Successfully")
