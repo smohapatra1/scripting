@@ -4,4 +4,4 @@ import json
 with open('file.json') as f:
     data = json.load(f)
     print ("Type:" , type(data))
-    print ("\nemail:", data['email'])
+    print ("\nemail:", data['people1'])
