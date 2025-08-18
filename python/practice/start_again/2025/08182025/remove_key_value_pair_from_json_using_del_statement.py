@@ -1,0 +1,17 @@
+#   https://www.geeksforgeeks.org/python/how-to-remove-key-value-pair-from-a-json-file-in-python/
+
+import json
+
+with open('file.json', "r") as file:
+    data = json.load(file)
+
+key_to_remove = "featured_article"
+
+if key_to_remove in data.keys():
+    removed_value = data[key_to_remove]
+    del data[key_to_remove]
+    print (f"Removed key '{key_to_remove}' with value: {removed_value} ")
+else:
+    print ("Key does not exist")
+with open ('output.json', 'w') as f:
+    json.dump(data, f, indent=2)
